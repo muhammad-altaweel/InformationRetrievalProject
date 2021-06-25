@@ -1,0 +1,7 @@
+Monday Mon Mo
+Tuesday Tue Tu
+Wednesday Wed We
+Thursday Thu Th
+Friday Fri Fr
+Saturday Sat Sa
+Sunday Sun Su

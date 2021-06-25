@@ -1,0 +1,7 @@
+usd-$-usa dollar
+eur-€-euro
+crc-¢-costa rican colon
+gbp-£-british pound sterling
+jpy-¥-japanese yen
+pln-zl-polish zloty
+per-%-percent

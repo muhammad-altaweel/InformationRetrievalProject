@@ -1,0 +1,212 @@
+Abide	Abode Abided   Abode Abided Abidden
+Alight	Alit Alighted	Alit Alighted
+Arise	Arose	Arisen
+Awake	Awoke	Awoken
+Be	Was Were	Been
+Bear	Bore	Born Borne
+Beat	Beat	Beaten
+Become	Became	Become
+Begin	Began	Begun
+Behold	Beheld	Beheld
+Bend	Bent	Bent
+Bet	Bet	Bet
+Bid	Bid	Bid
+Bid	Bade	Bidden
+Bind	Bound	Bound
+Bite	Bit	Bitten
+Bleed	Bled	Bled
+Blow	Blew	Blown
+Break	Broke	Broken
+Breed	Bred	Bred
+Bring	Brought	Brought
+Broadcast	Broadcast Broadcasted Broadcast Broadcasted
+Build	Built	Built
+Burn	Burnt Burned	Burnt Burned
+Burst	Burst	Burst
+Bust	Bust	Bust
+Buy	Bought	Bought
+Cast	Cast	Cast
+Catch	Caught	Caught
+Choose	Chose	Chosen
+Clap	Clapped Clapt	Clapped Clapt
+Cling	Clung	Clung
+Clothe	Clad Clothed	Clad Clothed
+Come	Came	Come
+Cost	Cost	Cost
+Countersink	Countersank Countersunk	Countersunk
+Creep	Crept	Crept
+Cut	Cut	Cut
+Dare	Dared Durst	Dared
+Deal	Dealt	Dealt
+Dig	Dug	Dug
+Dive	Dived Dove	Dived
+Do	Did	Done
+Draw	Drew	Drawn
+Dream	Dreamt Dreamed	Dreamt Dreamed
+Drink	Drank	Drunk
+Drive	Drove	Driven
+Dwell	Dwelt	Dwelt
+Eat	Ate	Eaten
+Fall	Fell	Fallen
+Feed	Fed	Fed
+Feel	Felt	Felt
+Fight	Fought	Fought
+Find	Found	Found
+Fit	Fit Fitted	Fit Fitted
+Flee	Fled	Fled
+Fling	Flung	Flung
+Fly	Flew	Flown
+Forbid	Forbade Forbad	Forbidden
+Forecast	Forecast Forecasted	Forecast Forecasted
+Foresee	Foresaw	Foreseen
+Foretell	Foretold	Foretold
+Forget	Forgot	Forgotten
+Forgive	Forgave	Forgiven
+Forsake	Forsook	Forsaken
+Freeze	Froze	Frozen
+Frostbite	Frostbit	Frostbitten
+Get	Got	Got Gotten
+Give	Gave	Given
+Go	Went	Gone Been
+Grind	Ground	Ground
+Grow	Grew	Grown
+Handwrite	Handwrote	Handwritten
+Hang	Hung Hanged	Hung Hanged
+Have	Had	Had
+Hear	Heard	Heard
+Hide	Hid	Hidden
+Hit	Hit	Hit
+Hold	Held	Held
+Hurt	Hurt	Hurt
+Inlay	Inlaid	Inlaid
+Input	Input Inputted	Input Inputted
+Interlay	Interlaid	Interlaid
+Keep	Kept	Kept
+Kneel	Knelt Kneeled	Knelt Kneeled
+Knit	Knit Knitted	Knit Knitted
+Know	Knew	Known
+Lay	Laid	Laid
+Lead	Led	Led
+Lean	Leant Leaned	Leant Leaned
+Leap	Leapt Leaped	Leapt Leaped
+Learn	Learnt Learned	Learnt Learned
+Leave	Left	Left
+Lend	Lent	Lent
+Let	Let	Let
+Lie	Lay	Lain
+Light	Lit	Lit
+Lose	Lost	Lost
+Make	Made	Made
+Mean	Meant	Meant
+Meet	Met	Met
+Melt	Melted	Molten Melted
+Mislead	Misled	Misled
+Mistake	Mistook	Mistaken
+Misunderstand	Misunderstood	Misunderstood
+Miswed	Miswed Miswedded	Miswed Miswedded
+Mow	Mowed	Mown
+Overdraw	Overdrew	Overdrawn
+Overhear	Overheard	Overheard
+Overtake	Overtook	Overtaken
+Pay	Paid	Paid
+Preset	Preset	Preset
+Prove	Proved	Proven Proved
+Put	Put	Put
+Quit	Quit	Quit
+Re-prove	Re-proved	Re-proven Re-proved
+Read	Read	Read
+Rid	Rid Ridded	Rid Ridded
+Ride	Rode	Ridden
+Ring	Rang	Rung
+Rise	Rose	Risen
+Rive	Rived	Riven Rived
+Run	Ran	Run
+Saw	Sawed	Sawn Sawed
+Say	Said	Said
+See	Saw	Seen
+Seek	Sought	Sought
+Sell	Sold	Sold
+Send	Sent	Sent
+Set	Set	Set
+Sew	Sewed	Sewn Sewed
+Shake	Shook	Shaken
+Shave	Shaved	Shaven Shaved
+Shear	Shore Sheared	Shorn Sheared
+Shed	Shed	Shed
+Shine	Shone	Shone
+Shoe	Shod	Shod
+Shoot	Shot	Shot
+Show	Showed	Shown
+Shrink	Shrank	Shrunk
+Shut	Shut	Shut
+Sing	Sang	Sung
+Sink	Sank	Sunk
+Sit	Sat	Sat
+Slay	Slew	Slain
+Sleep	Slept	Slept
+Slide	Slid	Slid Slidden
+Sling	Slung	Slung
+Slink	Slunk	Slunk
+Slit	Slit	Slit
+Smell	Smelt Smelled	Smelt Smelled
+Sneak	Sneaked Snuck	Sneaked Snuck
+Soothsay	Soothsaid	Soothsaid
+Sow	Sowed	Sown
+Speak	Spoke	Spoken
+Speed	Sped Speeded	Sped Speeded
+Spell	Spelt Spelled	Spelt Spelled
+Spend	Spent	Spent
+Spill	Spilt Spilled	Spilt Spilled
+Spin	Span Spun	Spun
+Spit	Spat Spit	Spat Spit
+Split	Split	Split
+Spoil	Spoilt Spoiled	Spoilt Spoiled
+Spread	Spread	Spread
+Spring	Sprang	Sprung
+Stand	Stood	Stood
+Steal	Stole	Stolen
+Stick	Stuck	Stuck
+Sting	Stung	Stung
+Stink	Stank	Stunk
+Stride	Strode Strided	Stridden
+Strike	Struck	Struck Stricken
+String	Strung	Strung
+Strip	Stript Stripped	Stript Stripped
+Strive	Strove	Striven
+Sublet	Sublet	Sublet
+Sunburn	Sunburned Sunburnt	Sunburned Sunburnt
+Swear	Swore	Sworn
+Sweat	Sweat Sweated	Sweat Sweated
+Sweep	Swept Sweeped	Swept Sweeped
+Swell	Swelled	Swollen
+Swim	Swam	Swum
+Swing	Swung	Swung
+Take	Took	Taken
+Teach	Taught	Taught
+Tear	Tore	Torn
+Tell	Told	Told
+Think	Thought	Thought
+Thrive	Throve Thrived	Thriven Thrived
+Throw	Threw	Thrown
+Thrust	Thrust	Thrust
+Tread	Trod	Trodden
+Undergo	Underwent	Undergone
+Understand	Understood	Understood
+Undertake	Undertook	Undertaken
+Upsell	Upsold	Upsold
+Upset	Upset	Upset
+Vex	Vext Vexed	Vext Vexed
+Wake	Woke	Woken
+Wear	Wore	Worn
+Weave	Wove	Woven
+Wed	Wed Wedded	Wed Wedded
+Weep	Wept	Wept
+Wet	Wet Wetted	Wet Wetted
+Win	Won	Won
+Wind	Wound	Wound
+Withdraw	Withdrew	Withdrawn
+Withhold	Withheld	Withheld
+Withstand	Withstood	Withstood
+Wring	Wrung	Wrung
+Write	Wrote	Written
+Zinc	Zinced Zincked	Zinced Zincked

@@ -84,6 +84,44 @@ def CorrectQuery(query):
         else:
             newQuery.append(word)
     return " ".join(newQuery)
+#
+# #number
+#     for number in textsplit:
+#         x = regex.search("^(\+|-)?(\d)+(\.(\d)+)?$", number)
+#         if(x!=None):
+#             textsplit.remove(x.group())
+#       #text=text.replace(number,'')
+#             words.append(x.group())
+#
+#   #email
+#     for i,findemail in enumerate(textsplit):
+#         x = regex.search("^\w+@[a-z_]+?\.[a-z]{2,3}$",findemail)
+#         if(x!=None):
+#             textsplit[i]=textsplit[i].replace(x.group(),'')
+#       #text=text.replace(findemail,'')
+#             words.append(x.group())
+#
+#
+#   #URL
+#     for i,finduri in enumerate(textsplit):
+#         x = regex.search("(www\.)?\w+\.[a-z]{2,3}",finduri)
+#         if(x!=None):
+#             textsplit[i]=textsplit[i].replace(x.group(),'')
+#       #text=text.replace(finduri,'')
+#             words.append(x.group())
+#
+#
+#   #findOpaertaionMath
+#     for i,findOpaertaionMath in enumerate(textsplit):
+#         x = regex.search("^([-+]? ?(\d+|\(\g<1>\))( ?[-+*\/] ?\g<1>)?)$",findOpaertaionMath)
+#         if(x!=None):
+#             textsplit[i]=textsplit[i].replace(x.group(),'')
+#       #text=text.replace(number,'')
+#             words.append(x.group())
+#
+#
+
+
 
 if __name__ == '__main__':
     EnglishDict = enchant.Dict("en_US")

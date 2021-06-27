@@ -5,5 +5,5 @@ if __name__ == '__main__':
                 'percent']
     file = open('./Documents/Currencies.txt', 'w')
     for i in range(0, len(shortCurrency)):
-        file.writelines(str(currencySymbol[i]) + '-' + str(shortCurrency[i]) + '-' + str(Currency[i]) +'\n')
+        file.writelines(str(currencySymbol[i]) + '-' + str(shortCurrency[i]) + '-' + str(Currency[i]) + '\n')
     file.close()

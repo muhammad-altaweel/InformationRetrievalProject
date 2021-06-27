@@ -1,15 +1,8 @@
-import json
-from os import listdir
-from os.path import isfile, join
-from datetime import datetime
-from MySQLdb import Date
-from nltk import PorterStemmer
 import re
 import string
 
-from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk import PorterStemmer
 
-corpusDir = '../corpus/'
 irregularVerbsFile = '../Documents/irregular_verbs.txt'
 DaysNamesFile = '../Documents/Days.txt'
 MonthNamesFile = '../Documents/Months.txt'
@@ -170,85 +163,37 @@ def stemSentence(sentence):
     return "".join(stem_sentence)
 
 
-def build_index(Documents):
-    dict = {}
-    for i in range(len(Documents)):
-        document = Documents[i][0]
-        temp_dict = {}
-        for term in document.split():
-            if (temp_dict.__contains__(term)):
-                temp_dict[term] += 1
-            else:
-                temp_dict[term] = 1
-        for term in temp_dict.keys():
-            if (dict.__contains__(term)):
-                dict[term].append([Documents[i][1], temp_dict[term]])
-            else:
-                dict[term] = [[Documents[i][1], temp_dict[term]]]
-    return dict
-
-
-def save_index(path, data):
-    try:
-        file = open(path, "w")
-        file.write(json.dumps(data))
-        file.close()
-        return True
-
-    except:
-        print("EXCEPTION: while save JSON file: " + path)
-        return False
-
-
-def load_index(path):
-    try:
-        file = open(path, "r")
-        data = json.loads(file.read())
-        file.close()
-        return data
-    except:
-        print("EXCEPTION: while load JSON file: " + path)
-        return False
-
-
-if __name__ == '__main__':
+def processQuery(query):
+    global irregularVerbsDict
+    global DaysOfTheWeek
+    global MonthsNames
+    global Currencies
+    global StopWords
     porter = PorterStemmer()
     irregularVerbsDict = get_irregular_verbs()
     DaysOfTheWeek = get_Days_names()
     MonthsNames = get_Months_names()
     StopWords = get_stop_words()
     Currencies = getCurrencies()
-    listOfFilterdDocuments = []
-    corpusfiles = [f for f in listdir(corpusDir) if isfile(join(corpusDir, f))]
-    corpusfiles = sorted(corpusfiles,reverse= True)
-    print (corpusfiles)
-    # date1 = datetime.now()
-    for file in corpusfiles:
-        fileWords = openfile(corpusDir + file)
-        # Remove Unicode
-        document_test = re.sub(r'[^\x00-\x7F]+', ' ', fileWords)
-        # Remove Mentions
-        document_test = re.sub(r'@\w+', '', document_test)
-        # Lowercase the document
-        document_test = document_test.lower()
-        # # Remove punctuations
-        document_test = re.sub(r'[%s]' % re.escape(string.punctuation), ' ', document_test)
-        # # Lowercase the numbers
-        # document_test = re.sub(r'[0-9]', '', document_test)
-        # Remove the doubled space
-        document_test = re.sub(r'\s{2,}', ' ', document_test)
-        # Remove stop words
-        document_test = " ".join([word for word in document_test.split(' ') if binary_search(StopWords, word) == -1])
-        listOfFilterdDocuments.append([document_test,file])
-    stemmedSentence = []
-    for sentence in listOfFilterdDocuments:
-        newSentence = stemSentence(sentence[0])
-        # print(newSentence)
-        stemmedSentence.append([newSentence,sentence[1]])
+    StopWords = get_stop_words()
+    # Remove Unicode
+    document_test = re.sub(r'[^\x00-\x7F]+', ' ', query)
+    # Remove Mentions
+    document_test = re.sub(r'@\w+', '', document_test)
+    # Lowercase the document
+    document_test = document_test.lower()
+    # # Remove punctuations
+    document_test = re.sub(r'[%s]' % re.escape(string.punctuation), ' ', document_test)
+    # # Lowercase the numbers
+    # document_test = re.sub(r'[0-9]', '', document_test)
+    # Remove the doubled space
+    document_test = re.sub(r'\s{2,}', ' ', document_test)
+    # Remove stop words
+    document_test = " ".join([word for word in document_test.split(' ') if word not in StopWords])
+    document_test = stemSentence(document_test)
+    return document_test
 
-    index = build_index(stemmedSentence)
-    save_index('../indexfiles/index.json', index)
-    # index = load_index('../indexfiles/index.json')
-    # print(index)
-    # date2 = datetime.now()
-    # print(date2 - date1)
+
+if __name__ == '__main__':
+    query= "1960"
+    print(processQuery(query))

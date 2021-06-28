@@ -1,5 +1,16 @@
+from os import listdir
+from os.path import isfile, join
+from re import match
+
+import datefinder
+import spacy
+from date_extractor import extract_dates
+
 import enchant
 from itertools import permutations
+
+from indexing.indexer import corpusDir
+
 global EnglishDict
 
 
@@ -76,7 +87,7 @@ def CorrectWord(word):
 
 def CorrectQuery(query):
     query = query.split(' ')
-    global EnglishDict
+    EnglishDict = enchant.Dict("en_US")
     newQuery = list()
     for word in query:
         if(not EnglishDict.check(word)):
@@ -84,6 +95,30 @@ def CorrectQuery(query):
         else:
             newQuery.append(word)
     return " ".join(newQuery)
+
+def extractDates():
+    corpusfiles = [f for f in listdir(corpusDir) if isfile(join(corpusDir, f))]
+    matches=[]
+    for file in corpusfiles:
+        temp_file = open(join(corpusDir, file),'r')
+        string = temp_file.read()
+        match = extract_dates(string)
+        match = list(match)
+        if(len(match)>0):
+            matches.append([match, file])
+    return matches
+
+def get_noun(sentence):
+    sp = spacy.load('en_core_web_sm')
+    sentence = sp(sentence)
+    # for word in sentence:
+    #     print(word.text,word.pos_)
+    # for entity in sentence.ents:
+    #     print(entity.text + ' - ' + entity.label_ + ' - ' + str(spacy.explain(entity.label_)))
+    for m in sentence.noun_chunks:
+        print(m.text)
+
+
 #
 # #number
 #     for number in textsplit:
@@ -124,5 +159,6 @@ def CorrectQuery(query):
 
 
 if __name__ == '__main__':
-    EnglishDict = enchant.Dict("en_US")
-    print(CorrectQuery('mohter helcopter speak ris'))
+    # print(CorrectQuery('mohter helcopter speak ris'))
+    # print(extractDates())
+    print(get_noun('sami wins football game,karam plays with fadi'))

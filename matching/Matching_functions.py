@@ -56,14 +56,18 @@ def cosine_similarity(v1, v2):
         sumxx += x * x
         sumyy += y * y
         sumxy += x * y
-    return sumxy / math.sqrt(sumxx * sumyy)
+    try:
+        ret = sumxy / math.sqrt(sumxx * sumyy)
+    except:
+        return 0
+    return ret
 
 
 def getmatches(queryVector, DocumentVectors):
     answers = []
     for vector in DocumentVectors.keys():
         value = 1 - spatial.distance.cosine(queryVector, DocumentVectors.get(vector))
-        value2 = cosine_similarity(queryVector, DocumentVectors.get(vector))
+        # value2 = cosine_similarity(queryVector, DocumentVectors.get(vector))
         if (value > 0.0):
             answers.append([value, vector])
     return sorted(answers, reverse=True)

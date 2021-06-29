@@ -3,6 +3,8 @@ import string
 
 from nltk import PorterStemmer
 
+from indexing.indexer import get_irregular_verbs, get_Days_names, get_Months_names, get_stop_words, getCurrencies
+
 irregularVerbsFile = '../Documents/irregular_verbs.txt'
 DaysNamesFile = '../Documents/Days.txt'
 MonthNamesFile = '../Documents/Months.txt'
@@ -13,97 +15,6 @@ global DaysOfTheWeek
 global MonthsNames
 global Currencies
 global StopWords
-
-
-def binary_search(array, element):
-    mid = 0
-    start = 0
-    end = len(array) - 1
-    step = 0
-    while start <= end:
-        # print("Subarray in step {}: {}".format(step, str(array[start:end+1])))
-        step = step + 1
-        mid = (start + end) // 2
-
-        if element == array[mid]:
-            return mid
-
-        if element < array[mid]:
-            end = mid - 1
-        else:
-            start = mid + 1
-    return -1
-
-
-def openfile(filename):
-    try:
-        file = open(filename, 'r')
-        l = file.read()
-        file.close()
-        return l
-    except:
-        return 'something went wrong with open file' + filename
-
-
-def get_irregular_verbs():
-    words = openfile(irregularVerbsFile)
-    words = words.lower()
-    words = words.split('\n')
-    dict = {}
-    for line in words:
-        wordsList = line.split()
-        for word in wordsList:
-            dict[word] = wordsList[0]
-    return dict
-
-
-def get_Days_names():
-    words = openfile(DaysNamesFile)
-    words = words.lower()
-    words = words.split('\n')
-    dict = {}
-    for line in words:
-        wordsList = line.split()
-        for word in wordsList:
-            dict[word] = wordsList[0]
-    return dict
-
-
-def get_Months_names():
-    words = openfile(MonthNamesFile)
-    words = words.lower()
-    words = words.split('\n')
-    dict = {}
-    for line in words:
-        wordsList = line.split()
-        for word in wordsList:
-            dict[word] = wordsList[0]
-    return dict
-
-
-def get_stop_words():
-    words = openfile(StopWordsFile)
-    words = words.lower()
-    words = words.split('\n')
-    arr = []
-    for line in words:
-        wordsList = line.split()
-        for word in wordsList:
-            arr.append(word)
-    arr = sorted(arr)
-    return arr
-
-
-def getCurrencies():
-    words = openfile(CurrenciesFile)
-    words = words.lower()
-    words = words.split('\n')
-    dict = {}
-    for line in words:
-        wordsList = line.split('-')
-        for word in wordsList:
-            dict[word] = wordsList[0]
-    return dict
 
 
 def getInfinitive(word):
@@ -169,7 +80,6 @@ def processQuery(query):
     global MonthsNames
     global Currencies
     global StopWords
-    porter = PorterStemmer()
     irregularVerbsDict = get_irregular_verbs()
     DaysOfTheWeek = get_Days_names()
     MonthsNames = get_Months_names()
@@ -184,8 +94,6 @@ def processQuery(query):
     document_test = document_test.lower()
     # # Remove punctuations
     document_test = re.sub(r'[%s]' % re.escape(string.punctuation), ' ', document_test)
-    # # Lowercase the numbers
-    # document_test = re.sub(r'[0-9]', '', document_test)
     # Remove the doubled space
     document_test = re.sub(r'\s{2,}', ' ', document_test)
     # Remove stop words
@@ -195,5 +103,5 @@ def processQuery(query):
 
 
 if __name__ == '__main__':
-    query= "1960"
+    query= "gone to africa and learned alot "
     print(processQuery(query))

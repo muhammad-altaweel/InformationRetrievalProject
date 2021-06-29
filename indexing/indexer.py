@@ -1,13 +1,10 @@
 import json
 from os import listdir
 from os.path import isfile, join
-from datetime import datetime
-from MySQLdb import Date
 from nltk import PorterStemmer
 import re
 import string
 
-from nltk.tokenize import sent_tokenize, word_tokenize
 
 corpusDir = '../corpus/'
 irregularVerbsFile = '../Documents/irregular_verbs.txt'
@@ -28,7 +25,6 @@ def binary_search(array, element):
     end = len(array) - 1
     step = 0
     while start <= end:
-        # print("Subarray in step {}: {}".format(step, str(array[start:end+1])))
         step = step + 1
         mid = (start + end) // 2
 
@@ -220,7 +216,7 @@ if __name__ == '__main__':
     Currencies = getCurrencies()
     listOfFilterdDocuments = []
     corpusfiles = [f for f in listdir(corpusDir) if isfile(join(corpusDir, f))]
-    corpusfiles = sorted(corpusfiles,reverse= True)
+    corpusfiles = sorted(corpusfiles, reverse= True)
     print (corpusfiles)
     # date1 = datetime.now()
     for file in corpusfiles:
@@ -231,10 +227,8 @@ if __name__ == '__main__':
         document_test = re.sub(r'@\w+', '', document_test)
         # Lowercase the document
         document_test = document_test.lower()
-        # # Remove punctuations
+        # Remove punctuations
         document_test = re.sub(r'[%s]' % re.escape(string.punctuation), ' ', document_test)
-        # # Lowercase the numbers
-        # document_test = re.sub(r'[0-9]', '', document_test)
         # Remove the doubled space
         document_test = re.sub(r'\s{2,}', ' ', document_test)
         # Remove stop words
@@ -250,5 +244,3 @@ if __name__ == '__main__':
     save_index('../indexfiles/index.json', index)
     # index = load_index('../indexfiles/index.json')
     # print(index)
-    # date2 = datetime.now()
-    # print(date2 - date1)

@@ -1,5 +1,4 @@
 import math
-import operator
 from scipy import spatial
 
 from QueryHandling.QueryProcess import processQuery
@@ -7,20 +6,17 @@ from indexing.indexer import load_index, corpusDir
 from os import listdir
 from os.path import isfile, join
 
-
 def build_vectors(index):
     DocumentsVectors = {}
     Terms = index.keys()
     Terms = list(Terms)
     corpusfiles = [f for f in listdir(corpusDir) if isfile(join(corpusDir, f))]
-
     for file in corpusfiles:
         DocumentsVectors[file] = [0] * len(Terms)
-
     for i in range(len(Terms)):
         term = str(Terms[i])
         for record in index[term]:
-            DocumentsVectors[record[0]][i] = len(index[term]) * record[1]
+            DocumentsVectors[record[0]][i] = len(index[term]) / record[1]
     return DocumentsVectors
 
 
@@ -75,7 +71,6 @@ def getmatches(queryVector, DocumentVectors):
 
 if __name__ == '__main__':
     query = """ U.N . CONSIDERATION OF THE CONFLICT BETWEEN ISRAEL AND ITS
-
 ARAB NEIGHBORS ."""
     query = processQuery(query)
     print(query)

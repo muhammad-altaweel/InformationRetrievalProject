@@ -1,0 +1,21 @@
+Libraries:
+    PySimpleGUI : for graphical user interface
+    json : for handling storage as json object
+    os : for dealing with files and folders
+    re : for dealing with regular expression
+    string : to get punctuations letters
+    nltk : for stemming and lemmetization
+    math : for use sqrt function
+    scipy : for use the cosine function
+    spacy : for extract the nouns
+    date_extractor: for extracting the dates
+    enchant : to get a dictionary for english language
+    itertools : te get the permutations of a word
+
+Modules:
+    GUI: for handling the gui
+    indexer: for indexing the corpus
+    Matching_functions: for assembling match functions
+    Query_functions: for assembling query_related functions
+    QueryProcess: for dealing with queries
+    tester: for testing the results based on AUC standard

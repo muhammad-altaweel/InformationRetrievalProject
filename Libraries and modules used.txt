@@ -4,7 +4,7 @@ Libraries:
     os : for dealing with files and folders
     re : for dealing with regular expression
     string : to get punctuations letters
-    nltk : for stemming and lemmetization
+    nltk : for stemming and lemmatization
     math : for use sqrt function
     scipy : for use the cosine function
     spacy : for extract the nouns

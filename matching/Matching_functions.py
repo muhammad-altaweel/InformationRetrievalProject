@@ -1,10 +1,11 @@
 import math
+from os import listdir
+from os.path import isfile, join
 from scipy import spatial
 
 from QueryHandling.QueryProcess import processQuery
 from indexing.indexer import load_index, corpusDir
-from os import listdir
-from os.path import isfile, join
+
 
 def build_vectors(index):
     DocumentsVectors = {}

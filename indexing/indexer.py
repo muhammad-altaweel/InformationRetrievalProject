@@ -1,10 +1,9 @@
 import json
-from os import listdir
-from os.path import isfile, join
-from nltk import PorterStemmer
 import re
 import string
-
+from nltk import PorterStemmer
+from os import listdir
+from os.path import isfile, join
 
 corpusDir = '../corpus/'
 irregularVerbsFile = '../Documents/irregular_verbs.txt'
@@ -216,8 +215,8 @@ if __name__ == '__main__':
     Currencies = getCurrencies()
     listOfFilterdDocuments = []
     corpusfiles = [f for f in listdir(corpusDir) if isfile(join(corpusDir, f))]
-    corpusfiles = sorted(corpusfiles, reverse= True)
-    print (corpusfiles)
+    corpusfiles = sorted(corpusfiles, reverse=True)
+    print(corpusfiles)
     # date1 = datetime.now()
     for file in corpusfiles:
         fileWords = openfile(corpusDir + file)
@@ -233,12 +232,12 @@ if __name__ == '__main__':
         document_test = re.sub(r'\s{2,}', ' ', document_test)
         # Remove stop words
         document_test = " ".join([word for word in document_test.split(' ') if binary_search(StopWords, word) == -1])
-        listOfFilterdDocuments.append([document_test,file])
+        listOfFilterdDocuments.append([document_test, file])
     stemmedSentence = []
     for sentence in listOfFilterdDocuments:
         newSentence = stemSentence(sentence[0])
         # print(newSentence)
-        stemmedSentence.append([newSentence,sentence[1]])
+        stemmedSentence.append([newSentence, sentence[1]])
 
     index = build_index(stemmedSentence)
     save_index('../indexfiles/index.json', index)

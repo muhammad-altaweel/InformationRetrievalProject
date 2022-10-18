@@ -1,6 +1,5 @@
 import re
 import string
-
 from nltk import PorterStemmer
 
 from indexing.indexer import get_irregular_verbs, get_Days_names, get_Months_names, get_stop_words, getCurrencies
@@ -103,5 +102,5 @@ def processQuery(query):
 
 
 if __name__ == '__main__':
-    query= "gone to africa and learned alot "
+    query = "gone to africa and learned alot "
     print(processQuery(query))
